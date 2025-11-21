@@ -18,11 +18,11 @@ function drawOrnaments(x, y, size) {
     const colors = ['red', 'yellow', 'blue', 'purple', 'orange'];
 
     for (let i = 0; i < colors.length; i++) {
-        const ornamentX = x + (i - 2) * 25 * size;
-        const ornamentY = y + (i + 1) * 25 * size;
+        const ornamentX = x + (i - 2) * 18 * size;
+        const ornamentY = y + (i + 1) * 18 * size;
         ctx.fillStyle = colors[i];
         ctx.beginPath();
-        ctx.arc(ornamentX, ornamentY, 10 * size, 0, Math.PI * 2);
+        ctx.arc(ornamentX, ornamentY, 9 * size, 0, Math.PI * 2);
         ctx.fill();
     }
 }
@@ -30,7 +30,7 @@ function drawOrnaments(x, y, size) {
 function drawStar(x, y, size) {
     ctx.fillStyle = 'yellow';
     ctx.beginPath();
-    const starRadius = 20 * size;
+    const starRadius = 19 * size;
     const spikes = 5;
     const step = Math.PI / spikes;
 
@@ -89,7 +89,7 @@ function drawSnowman(x, y) {
     ctx.arc(x, y - 100, 20, 0, Math.PI * 2);
     ctx.fill();
     ctx.strokeStyle = 'black';
-    ctx.lineWidth = 3;
+    ctx.lineWidth = 1;
     ctx.stroke();
 
     ctx.fillStyle = 'black';
@@ -124,8 +124,8 @@ function drawSnowman(x, y) {
 
 function drawText() {
     ctx.fillStyle = 'black';
-    ctx.font = '30px Arial';
-    ctx.fillText("Merry Christmas", 250, 500);
+    ctx.font = '35px Arial';
+    ctx.fillText("Merry Christmas!", 300, 500);
 }
 
 function drawCard() {
@@ -135,8 +135,8 @@ function drawCard() {
     drawChristmasTree(400, 150, 1);  
     drawOrnaments(400, 150, 1);
     drawStar(400, 150, 1);
-    drawHouse(300, 250);
-    drawSnowman(600, 350);
+    drawHouse(200, 250);
+    drawSnowman(500, 350);
     drawText();
 }
 
